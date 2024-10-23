@@ -1,0 +1,56 @@
+package model.persistence;
+
+import model.domain.*;
+import java.util.ArrayList;
+
+public class Persistence {
+  public static ArrayList<Member> hardCodedData() {
+
+    ArrayList<Member> list = new ArrayList<>();
+    
+
+    Member memOne = new Member("Dale Phillips", "dale1@gmail.com", "123000", "kozy00");
+    Item itemOne = new Item("table","bed table","furniture", 50);
+
+    Item itemTwo = new Item("pen", "pink color pen", "tool", 10);
+
+    memOne.addItem(itemOne);
+    memOne.addItem(itemTwo);
+    memOne.setCredits(500);
+
+    Member mem2 = new Member("Sabrina MCQueen", "mcQueen@gmail.com", "333333", "power1");
+    mem2.setCredits(100);
+
+    Member mem3 = new Member("Misty Malone", "misty00@gmail.com", "300300", "step12");
+    Item item3 = new Item("carpet", "bathrooms carpet", "furniture", 1000);
+    mem3.addItem(item3);
+    mem3.setCredits(100);
+    Contract con1 = new Contract(5, 7, itemTwo, mem3);
+    itemTwo.addContract(con1);
+    //itemTwo.setAvailable(false);
+    
+    
+
+    
+    Member mem4 = new Member("Michael Jones", "jones1@gmail.com", "123451", "on1jon");
+    Item item4 = new Item("book", "cookbook", "other", 10);
+    Item item5 = new Item("chair", "wood chair", "furniture", 10);
+    Item item6 = new Item("mirror", "reflex mirror", "furniture", 10);
+
+    mem4.addItem(item4);
+    mem4.addItem(item5);
+    mem4.addItem(item6);
+    mem4.setCredits(300);
+
+    list.add(memOne);
+    list.add(mem2);
+    list.add(mem3);
+    list.add(mem4);
+
+    return list ;
+    
+
+  }
+}
+
+
